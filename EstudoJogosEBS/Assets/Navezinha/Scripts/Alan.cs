@@ -11,10 +11,13 @@ public class Alan : MonoBehaviour
     [Header("Movimentação")]
     public float velocidade;
 
+    [Header("Drop")]
+    public GameObject powerUp;
+
     // Start is called before the first frame update
     void Start()
     {
-
+        Player.instancia.alansAtivos.Add(this);
     }
 
     // Update is called once per frame
@@ -26,5 +29,15 @@ public class Alan : MonoBehaviour
     private void FixedUpdate()
     {
         corpoAlan.velocity = new Vector2(0, velocidade);
+    }
+
+    public void DroparItem()
+    {
+        int rnd = Random.Range(0, 10);
+
+        if(rnd < 4)
+        {
+            Instantiate(powerUp, transform.position, Quaternion.identity);
+        }
     }
 }

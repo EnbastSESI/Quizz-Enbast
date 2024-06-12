@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Navezinha/Cenas/JogoNavezinha.unity
+    guid: 083e75c2b09672b449a18ed7d16e5977
   m_configObjects: {}
